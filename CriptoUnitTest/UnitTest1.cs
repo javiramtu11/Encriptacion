@@ -14,7 +14,7 @@ namespace CriptoUnitTest
         {
             string frase = MetodoEncriptar.RijndaelSimple.Desencriptar("hZVsN6WbR3oEGAsRpZEGxg==");
             
-            Assert.AreEqual("123abcx", frase);
+            Assert.AreEqual("123abcxc", frase);
         }
     }
 }
