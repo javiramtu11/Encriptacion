@@ -5,18 +5,27 @@ using System.Web;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-
+using System.Configuration;
 
 namespace Encriptacion
 {
     public static class MetodoEncriptar
     {
+        public static string user = null;
+
+
         public static class RijndaelSimple
 
         {
 
             #region Encriptar
-            
+
+            public static void clave()
+            {
+                string usuario = ConfigurationManager.AppSettings["Usuario"];
+                user = usuario;
+            }
+
 
             public static string Encriptar(string textoQueEncriptaremos)
 

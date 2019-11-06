@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -23,11 +24,24 @@ namespace Encriptacion
         protected void Button1_Click(object sender, EventArgs e)
         {
             TextBox1.Text = MetodoEncriptar.RijndaelSimple.Encriptar(TextBox2.Text);
+             
+            
+
+            
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            
             TextBox3.Text = MetodoEncriptar.RijndaelSimple.Desencriptar(TextBox4.Text);
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            string usuario = ConfigurationManager.AppSettings["Usuario"];
+
+            Label1.Text = MetodoEncriptar.RijndaelSimple.Desencriptar(usuario);
         }
     }
 }

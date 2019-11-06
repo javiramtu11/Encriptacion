@@ -1,5 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Encriptacion;
+using System.Configuration;
+
+
 
 namespace CriptoUnitTest
 {
@@ -9,8 +12,9 @@ namespace CriptoUnitTest
         [TestMethod]
         public void ValidarEncriptacionTestMethod()
         {
-
-
+            string frase = MetodoEncriptar.RijndaelSimple.Desencriptar("hZVsN6WbR3oEGAsRpZEGxg==");
+            
+            Assert.AreEqual("123abc", frase);
         }
     }
 }

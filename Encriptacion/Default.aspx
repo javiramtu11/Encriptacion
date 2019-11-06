@@ -36,4 +36,13 @@
         </div>
     </div>
 
+    <div> 
+        <h2>Desencriptar Clave del Web.Config</h2>
+        <br />
+
+        <asp:Button ID="Button3" runat="server" Text="Desencriptar" OnClick="Button3_Click" BackColor="Chocolate" Font-Bold="True" Font-Size="Medium" ForeColor="White" Height="44px" Width="157px" />
+        <h4>Clave Desencriptada</h4>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    </div>
+
 </asp:Content>
